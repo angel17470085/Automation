@@ -17,16 +17,23 @@ public class stepDefinition {
         System.out.println("User logs in with username and password");
         // Add code to perform login
     }
+    @When("User logins into the application with {string} and password {string}")
+    public void user_logins_into_the_application_with_and_password(String username, String password) {
+        System.out.println("Logged in with the following credentials");
+        System.out.println("username:" + username);
+        System.out.println("password:"+ password);
+    }
+
     @Then("^Home page is populated$")
     public void home_page_is_populated() {
         System.out.println("Home page is populated");
         // Add verification code for home page population
     }
+    @And("Cards displayed are {string}")
+    public void cards_displayed_are(String arg) {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println(arg);
 
-    @And("^Cards are displayed$")
-    public void cards_are_displayed() {
-        System.out.println("Cards are displayed");
-        // Add verification code for card display
     }
 
 }
